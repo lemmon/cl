@@ -1,6 +1,6 @@
 # CL - Simple PHP Console Logger
 
-A simple PHP console logger for local development and debugging, providing beautiful and detailed variable inspection. Particularly useful when working with PHP's built-in development server.
+A simple PHP console logger for local development and debugging, providing beautiful and detailed variable inspection. Particularly useful when working with PHP's built-in development server. During HTTP requests, dumps are automatically redirected to stdout, keeping your responses clean while still providing detailed debugging information.
 
 ## Installation
 
@@ -47,6 +47,8 @@ Then open your browser and navigate to http://localhost:8000. You'll see a simpl
 - Works with any PHP type
 - Zero configuration needed
 - Lightweight and simple to use
+- Debug output appears in your terminal, not in the browser
+- Keeps HTTP responses clean while debugging
 
 ## Requirements
 
