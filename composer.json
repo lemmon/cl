@@ -1,0 +1,41 @@
+{
+    "name": "lemmon/cl",
+    "type": "library",
+    "description": "A simple PHP console logger for local development and debugging",
+    "keywords": [
+        "logging",
+        "console",
+        "debug",
+        "development",
+        "php",
+        "logger",
+        "debugging"
+    ],
+    "homepage": "https://github.com/lemmon/cl",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jakub Pelák",
+            "email": "jakub.pelak@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "symfony/var-dumper": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0|^10.0"
+    },
+    "autoload": {
+        "files": [
+            "src/cl.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lemmon\\Cl\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
