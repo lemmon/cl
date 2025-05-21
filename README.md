@@ -5,8 +5,10 @@ A simple PHP console logger for local development and debugging, providing beaut
 ## Installation
 
 ```bash
-composer require lemmon/cl
+composer require lemmon/cl --dev
 ```
+
+> **Note:** Since this package is intended for development and debugging purposes, it's recommended to install it as a dev dependency using the `--dev` flag.
 
 ## Usage
 
