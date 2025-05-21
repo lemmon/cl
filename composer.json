@@ -36,6 +36,9 @@
             "Lemmon\\Cl\\Tests\\": "tests/"
         }
     },
+    "scripts": {
+        "example": "php -S localhost:8000 examples/simple-server.php"
+    },
     "minimum-stability": "stable",
     "prefer-stable": true
 }

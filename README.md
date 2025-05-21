@@ -27,6 +27,17 @@ cl("Hello World");
 
 > **Note:** This library is a wrapper around Symfony's [VarDumper](https://symfony.com/doc/current/components/var_dumper.html) component. Any variable that VarDumper can handle will work perfectly with this library.
 
+## Quick Example
+
+Want to try it out? Clone this repository and run:
+
+```bash
+composer install
+composer example
+```
+
+Then open your browser and navigate to http://localhost:8000. You'll see a simple message in your browser, but the real magic happens in your console where you'll see a beautifully formatted dump of various data types.
+
 ## Features
 
 - Beautiful console output with syntax highlighting
