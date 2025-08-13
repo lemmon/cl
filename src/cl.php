@@ -5,12 +5,15 @@ use Symfony\Component\VarDumper\Dumper\CliDumper;
 
 if (!function_exists('cl')) {
     /**
-     * Dumps data to console using Symfony VarDumper
+     * Dump a PHP value to the terminal (stdout) using Symfony VarDumper.
      *
-     * @param mixed $data The data to dump
-     * @return void
+     * Intended for local development. Keeps HTTP responses clean when using
+     * PHP's built-in server or frameworks like Kirby by writing to stdout
+     * instead of the HTTP response body.
+     *
+     * @param mixed $data Any value to inspect (scalars, arrays, objects, resources)
      */
-    function cl($data)
+    function cl($data): void
     {
         $cloner = new VarCloner();
         $dumper = new class extends CliDumper {
