@@ -9,7 +9,6 @@
 - Improve cl() function documentation for clarity and usage ([b92e55e](https://github.com/lemmon/cl/commit/b92e55e))
 - Enhance README with visual and detailed benefits ([6303845](https://github.com/lemmon/cl/commit/6303845))
 
-
 ## v1.0.0 - 2025-05-21
 
 Initial release.

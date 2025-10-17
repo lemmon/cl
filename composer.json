@@ -1,7 +1,8 @@
 {
     "name": "lemmon/cl",
+    "description": "Console logger for PHP that dumps cleanly to stdout, keeping HTTP responses intact while showing rich variable details.",
+    "license": "MIT",
     "type": "library",
-    "description": "A simple PHP console logger for local development and debugging",
     "keywords": [
         "logging",
         "console",
@@ -11,21 +12,23 @@
         "logger",
         "debugging"
     ],
-    "homepage": "https://github.com/lemmon/cl",
-    "license": "MIT",
     "authors": [
         {
             "name": "Jakub Pelák",
             "email": "jpelak@gmail.com"
         }
     ],
+    "homepage": "https://github.com/lemmon/cl",
     "require": {
         "php": ">=7.4",
-        "symfony/var-dumper": "^6.0|^7.0"
+        "symfony/var-dumper": "^6.0 || ^7.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.0|^10.0"
+        "ergebnis/composer-normalize": "^2.48",
+        "phpunit/phpunit": "^9.0 || ^10.0"
     },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "autoload": {
         "files": [
             "src/cl.php"
@@ -36,9 +39,13 @@
             "Lemmon\\Cl\\Tests\\": "tests/"
         }
     },
-    "scripts": {
-        "example": "php -S localhost:8000 examples/simple-server.php"
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "scripts": {
+        "example": "php -S localhost:8000 examples/simple-server.php",
+        "test": "vendor/bin/phpunit"
+    }
 }

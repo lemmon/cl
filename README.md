@@ -12,7 +12,8 @@ A simple PHP console logger for local development and debugging, providing beaut
 *   **Lightweight & Zero Configuration:** Just install and use. No complex setup or configuration files needed.
 *   **Framework Agnostic:** Works in any PHP project, regardless of the framework you're using.
 
-> **Note on Xdebug:** `cl` is a lightweight "dump-and-continue" tool for quick inspections, not a full-fledged debugger like Xdebug. They serve different purposes; Xdebug provides powerful step-debugging, profiling, and code coverage, while `cl` offers immediate, clean variable introspection.
+> [!NOTE]
+> `cl` is a lightweight "dump-and-continue" helper for quick inspections, whereas Xdebug handles step-debugging, profiling, and coverage—reach for the one that fits the task.
 
 ## Installation
 
@@ -20,7 +21,8 @@ A simple PHP console logger for local development and debugging, providing beaut
 composer require lemmon/cl --dev
 ```
 
-> **Note:** Since this package is intended for development and debugging purposes, it's recommended to install it as a dev dependency using the `--dev` flag.
+> [!TIP]
+> Install the package as a dev dependency (`composer require --dev`) so production builds stay lean.
 
 ## Usage
 
@@ -39,7 +41,8 @@ cl(42);
 cl("Hello World");
 ```
 
-> **Note:** This library is a wrapper around Symfony's [VarDumper](https://symfony.com/doc/current/components/var_dumper.html) component. Any variable that VarDumper can handle will work perfectly with this library.
+> [!NOTE]
+> The helper wraps Symfony's [VarDumper](https://symfony.com/doc/current/components/var_dumper.html), so any type VarDumper supports works automatically.
 
 ## Quick Example
 
@@ -51,6 +54,10 @@ composer example
 ```
 
 Then open your browser and navigate to http://localhost:8000. You'll see a simple message in your browser, but the real magic happens in your console where you'll see a beautifully formatted dump of various data types.
+
+## Running Tests
+
+Run `composer test` to execute the PHPUnit suite and confirm the helper remains functional.
 
 ## Features
 
