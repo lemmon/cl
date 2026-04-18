@@ -4,6 +4,7 @@
 
 - Support dumping multiple values in one `cl()` call.
 - Return dumped values from `cl()` for inline usage (single value when one argument is passed, array of values otherwise).
+- Cache the `VarCloner` and `CliDumper` instances across calls to avoid re-instantiation.
 
 ### Tests
 

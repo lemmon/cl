@@ -19,12 +19,13 @@ if (!function_exists('cl')) {
     function cl($data, ...$additional)
     {
         static $stdout = null;
+        static $cloner = null;
+        static $dumper = null;
         if ($stdout === null) {
             $stdout = fopen('php://stdout', 'wb');
+            $cloner = new VarCloner();
+            $dumper = new CliDumper($stdout);
         }
-
-        $cloner = new VarCloner();
-        $dumper = new CliDumper($stdout);
 
         if ($additional === []) {
             $dumper->dump($cloner->cloneVar($data));

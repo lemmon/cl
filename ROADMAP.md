@@ -26,7 +26,7 @@ This document outlines the planned improvements and future direction for the `cl
 
 - **Description**: Cache the `VarCloner` and `CliDumper` instances as static variables alongside the output stream.
 - **Benefit**: Reduces the overhead of re-instantiating these objects on every call to `cl()`.
-- **Status**: Planned
+- **Status**: Implemented
 
 ## Long-term Goals
 
