@@ -1,5 +1,9 @@
 ## Unreleased
 
+## v1.2.0 - 2026-04-18
+
+[Compare v1.1.0...v1.2.0](https://github.com/lemmon/cl/compare/v1.1.0...v1.2.0)
+
 ### Features
 
 - Support dumping multiple values in one `cl()` call.
