@@ -8,13 +8,13 @@ This document outlines the planned improvements and future direction for the `cl
 
 - **Description**: Allow passing multiple variables to the `cl()` function, similar to `var_dump()` or `dump()`.
 - **Usage**: `cl($var1, $var2, $var3);`
-- **Status**: Planned
+- **Status**: Implemented
 
 ### 2. Functional Return Value
 
 - **Description**: Update `cl()` to return the variable(s) being dumped. If one variable is passed, return it. If multiple are passed, return them as an array.
 - **Benefit**: Enables inline usage: `return cl($data);` or `$result = cl(calculate());`.
-- **Status**: Planned
+- **Status**: Implemented
 
 ### 3. Enhanced Testability
 

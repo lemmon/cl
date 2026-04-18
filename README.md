@@ -12,7 +12,8 @@ A simple PHP console logger for local development and debugging, providing beaut
 - **Lightweight & Zero Configuration:** Just install and use. No complex setup or configuration files needed.
 - **Framework Agnostic:** Works in any PHP project, regardless of the framework you're using.
 
-> [!NOTE] > `cl` is a lightweight "dump-and-continue" helper for quick inspections, whereas Xdebug handles step-debugging, profiling, and coverage—reach for the one that fits the task.
+> [!NOTE]
+> `cl` is a lightweight "dump-and-continue" helper for quick inspections, whereas Xdebug handles step-debugging, profiling, and coverage -- reach for the one that fits the task.
 
 ## Installation
 
@@ -34,6 +35,12 @@ require 'vendor/autoload.php';
 $data = ['hello' => 'world'];
 cl($data);
 
+// Dump multiple values in one call
+cl($data, new stdClass(), 42);
+
+// Use inline: cl() returns the dumped value
+$result = cl(calculate());
+
 // Works with any PHP type
 cl(new stdClass());
 cl(42);
@@ -42,6 +49,7 @@ cl("Hello World");
 
 > [!NOTE]
 > The helper wraps Symfony's [VarDumper](https://symfony.com/doc/current/components/var_dumper.html), so any type VarDumper supports works automatically.
+> When multiple values are passed, `cl()` returns them as an array.
 
 ## Quick Example
 
@@ -62,6 +70,8 @@ Run `composer test` to execute the PHPUnit suite and confirm the helper remains 
 
 - Beautiful console output with syntax highlighting
 - Detailed variable inspection
+- Multiple values in one call
+- Inline-friendly return values
 - Works with any PHP type
 - Zero configuration needed
 - Lightweight and simple to use

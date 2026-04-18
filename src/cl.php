@@ -5,15 +5,18 @@ use Symfony\Component\VarDumper\Dumper\CliDumper;
 
 if (!function_exists('cl')) {
     /**
-     * Dump a PHP value to the terminal (stdout) using Symfony VarDumper.
+     * Dump one or more PHP values to the terminal (stdout) using Symfony VarDumper.
      *
      * Intended for local development. Keeps HTTP responses clean when using
      * PHP's built-in server or frameworks like Kirby by writing to stdout
      * instead of the HTTP response body.
      *
-     * @param mixed $data Any value to inspect (scalars, arrays, objects, resources)
+     * @param mixed    $data          Any value to inspect (scalars, arrays, objects, resources)
+     * @param mixed ...$additional    Additional values to inspect
+     *
+     * @return mixed|array<int, mixed> The value when one argument is passed, otherwise all values as an array
      */
-    function cl($data): void
+    function cl($data, ...$additional)
     {
         static $stdout = null;
         if ($stdout === null) {
@@ -22,6 +25,20 @@ if (!function_exists('cl')) {
 
         $cloner = new VarCloner();
         $dumper = new CliDumper($stdout);
-        $dumper->dump($cloner->cloneVar($data));
+
+        if ($additional === []) {
+            $dumper->dump($cloner->cloneVar($data));
+
+            return $data;
+        }
+
+        $values = [$data, ...$additional];
+        foreach ($values as $index => $value) {
+            $dumper->dump(
+                $cloner->cloneVar($value)->withContext(['label' => (string) ($index + 1)])
+            );
+        }
+
+        return $values;
     }
 }

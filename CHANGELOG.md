@@ -1,3 +1,14 @@
+## Unreleased
+
+### Features
+
+- Support dumping multiple values in one `cl()` call.
+- Return dumped values from `cl()` for inline usage (single value when one argument is passed, array of values otherwise).
+
+### Tests
+
+- Add coverage for return values with single and multiple arguments.
+
 ## v1.1.0 - 2025-08-13
 
 [Compare v1.0.0...v1.1.0](https://github.com/lemmon/cl/compare/v1.0.0...v1.1.0)
