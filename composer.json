@@ -20,7 +20,7 @@
     ],
     "homepage": "https://github.com/lemmon/cl",
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.1",
         "symfony/var-dumper": "^6.0 || ^7.0"
     },
     "require-dev": {
