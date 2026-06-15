@@ -1,8 +1,16 @@
 ## Unreleased
 
+## v1.3.0 - 2026-06-15
+
+[Compare v1.2.0...v1.3.0](https://github.com/lemmon/cl/compare/v1.2.0...v1.3.0)
+
 ### Breaking Changes
 
 - Raise the minimum PHP version to 8.1 to match the `symfony/var-dumper` requirement (the previous `>=7.4` declaration was unsatisfiable, since `symfony/var-dumper ^6.0 || ^7.0` already requires PHP 8.1+).
+
+### CI
+
+- Add GitHub Actions workflow with composer validation and runtime smoke tests on PHP 8.1–8.4.
 
 ## v1.2.0 - 2026-04-18
 
