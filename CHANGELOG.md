@@ -1,5 +1,18 @@
 ## Unreleased
 
+## v2.0.0 - 2026-06-16
+
+[Compare v1.3.0...v2.0.0](https://github.com/lemmon/cl/compare/v1.3.0...v2.0.0)
+
+### Breaking Changes
+
+- Require `symfony/var-dumper` ^8.0 (drops support for ^6.0 and ^7.0).
+- Raise the minimum PHP version to 8.4 to match the `symfony/var-dumper` 8 requirement.
+
+### CI
+
+- Limit the test matrix to PHP 8.4, the new minimum supported version.
+
 ## v1.3.0 - 2026-06-15
 
 [Compare v1.2.0...v1.3.0](https://github.com/lemmon/cl/compare/v1.2.0...v1.3.0)

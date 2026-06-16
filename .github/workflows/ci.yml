@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: ['8.1', '8.2', '8.3', '8.4']
+        php: ['8.4']
 
     steps:
       - name: Checkout
@@ -34,8 +34,7 @@ jobs:
         # Resolve fresh per PHP version, runtime only. The dev tooling
         # (PHPUnit ^13) requires PHP 8.4+, so it is intentionally excluded
         # here. This still verifies the runtime constraint
-        # (symfony/var-dumper ^6.0 || ^7.0) is satisfiable across the whole
-        # supported range, e.g. ^6 on 8.1 and ^7 on 8.2+.
+        # (symfony/var-dumper ^8.0) is satisfiable on the supported PHP range.
         run: composer update --no-dev --prefer-dist --no-progress --no-interaction
 
       - name: Smoke test

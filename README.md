@@ -80,7 +80,7 @@ Run `composer test` to execute the PHPUnit suite and confirm the helper remains 
 
 ## Requirements
 
-- PHP 8.1 or higher
+- PHP 8.4 or higher
 
 ## License
 
